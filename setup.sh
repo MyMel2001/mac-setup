@@ -81,6 +81,10 @@ nvm i 13 && nvm i --lts && nvm i 24
 nvm alias default 24  # persist the default node version across new shells
 nvm use 24
 
+# Get surge...
+echo '[MAGIC] Installing Surge..'
+npm i -g surge
+
 # now we install our mac app store apps
 echo '[MAGIC] Now installing Mac App Store apps...'
 mas install 408981434 500154009 6736948278 931571202
