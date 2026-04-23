@@ -24,7 +24,7 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
 # install the basics
 echo '[MAGIC] Installing Homebrew packages...'
-brew install python@3.12 python-tk@3.12 wget yt-dlp nvm mas go fzf ollama codex gnucobol
+brew install python@3.12 python-tk@3.12 wget yt-dlp mas go fzf ollama codex gnucobol
 echo '[MAGIC] Installing Homebrew casks...'
 
 # Development tools
@@ -69,17 +69,17 @@ brew install --cask \
 echo '[MAGIC] Installing "nvm"...'
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
-echo '[MAGIC] Making "nvm" known'
 # load nvm into terminal and make it known
+echo '[MAGIC] Making "nvm" known'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"               # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-echo '[MAGIC] Installing NodeJS..'
 # now install our nodejs versions and persist the default
-nvm i 13 && nvm i --lts && nvm i 18
-nvm alias default 18  # persist the default node version across new shells
-nvm use 18
+echo '[MAGIC] Installing NodeJS..'
+nvm i 13 && nvm i --lts && nvm i 24
+nvm alias default 24  # persist the default node version across new shells
+nvm use 24
 
 # now we install our mac app store apps
 echo '[MAGIC] Now installing Mac App Store apps...'
