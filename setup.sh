@@ -191,5 +191,11 @@ echo '[MAGIC] Get what will make me stay alive...'
 wget -O "$HOME/.local/bin/cafe" https://github.com/MyMel2001/cafe/raw/refs/heads/main/cafe.sh
 chmod +x "$HOME/.local/bin/cafe"
 
+# Install Safari extensions
+mas install 1352778147  # Bitwarden                       (2026.3.1)
+mas install 6745342698  # uBlock Origin Lite              (2026.422.1301)
+mas install 1606897889  # Consent-O-Matic             (1.1.3)
+mas install 1561604170  # Nightshift Dark Mode            (1.2)
+
 echo '[MAGIC] Rebooting...'
 sudo reboot
