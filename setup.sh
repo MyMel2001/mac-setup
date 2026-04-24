@@ -178,10 +178,10 @@ chmod +x "$HOME/.local/bin/clood-kode"
 
 # Install Safari extensions
 echo '[MAGIC] Going on a Safari to get extensions...'
-mas install 1352778147  # Bitwarden                       (2026.3.1)
-mas install 6745342698  # uBlock Origin Lite              (2026.422.1301)
-mas install 1606897889  # Consent-O-Matic             (1.1.3)
-mas install 1561604170  # Nightshift Dark Mode            (1.2)
+mas install 1352778147  # Bitwarden
+mas install 6745342698  # uBlock Origin Lite
+mas install 1606897889  # Consent-O-Matic
+mas install 1561604170  # Nightshift Dark Mode
 
 # Download NextDNS profile
 echo '[MAGIC] Downloading NextDNS profile...'
