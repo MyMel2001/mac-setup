@@ -178,15 +178,9 @@ mas install 6745342698  # uBlock Origin Lite              (2026.422.1301)
 mas install 1606897889  # Consent-O-Matic             (1.1.3)
 mas install 1561604170  # Nightshift Dark Mode            (1.2)
 
-# break her open
-echo '[MAGIC] Disabling lockdown mode...'
-defaults write .GlobalPreferences.plist LDMGlobalEnabled -bool false
-
 # Download NextDNS profile
 echo '[MAGIC] Downloading NextDNS profile...'
-wget -O nextdns.mobileconfig https://tinyurl.com/yc26w9rc
-open nextdns.mobileconfig
-rm nextdns.mobileconfig
+wget -O ~/nextdns.mobileconfig https://tinyurl.com/yc26w9rc
 
 # Make it dark
 echo '[MAGIC] Enabling dark mode...'
