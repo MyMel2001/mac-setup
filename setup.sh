@@ -24,7 +24,7 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
 # install the basics
 echo '[MAGIC] Installing Homebrew packages...'
-brew install python@3.12 python-tk@3.12 wget yt-dlp mas go fzf ollama codex gnucobol
+brew install python@3.12 python-tk@3.12 wget yt-dlp mas go fzf ollama codex gnucobol claude-code
 echo '[MAGIC] Installing Homebrew casks...'
 
 # Development tools
