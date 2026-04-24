@@ -111,25 +111,24 @@ antigravity --install-extension ms-azuretools.vscode-docker
 echo '[MAGIC] Gathering Rosetta Stones...'
 softwareupdate --install-rosetta --agree-to-license
 
-# VMWARE DISABLED.
 # time to get 'ware of the VM. ;)
-# echo '[MAGIC] Grasping at VMWare...'
-# wget https://gist.github.com/jetfir3/6b28fd279bbcadbae70980bd711a844f/raw/310e41f8fc5d53736d6ea6f0f850993b6d2ac1c5/download_fusion.sh
-# sudo bash download_fusion.sh -s archive.org -v "13.6.3"
-# rm download_fusion.sh
+echo '[MAGIC] Grasping at VMWare...'
+wget https://gist.github.com/jetfir3/6b28fd279bbcadbae70980bd711a844f/raw/310e41f8fc5d53736d6ea6f0f850993b6d2ac1c5/download_fusion.sh
+sudo bash download_fusion.sh -s archive.org -v "13.6.3"
+rm download_fusion.sh
 
 # find and open the dmg.
-# echo '[MAGIC] Opening VMWare DMG...'
-# hdiutil attach ~/Downloads/VMware-Fusion-13.6.3-*.dmg
+echo '[MAGIC] Opening VMWare DMG...'
+hdiutil attach ~/Downloads/VMware-Fusion-13.6.3-*.dmg
 
 # install time!
-# echo '[MAGIC] Installing VMWare...'
-# open '/Volumes/VMware Fusion/VMware Fusion.app'
+echo '[MAGIC] Installing VMWare...'
+open '/Volumes/VMware Fusion/VMware Fusion.app'
 
 # clean up like a good lil' script. uwu
-# echo '[MAGIC] Unmounting+Removing VMWare DMG'
-# hdiutil detach '/Volumes/VMware Fusion'
-# rm -rf ~/Downloads/VMware-Fusion-13.6.3-*.dmg
+echo '[MAGIC] Unmounting+Removing VMWare DMG'
+hdiutil detach '/Volumes/VMware Fusion'
+rm -rf ~/Downloads/VMware-Fusion-13.6.3-*.dmg
 
 # find and open the dmg.
 echo '[MAGIC] Installing Open Cowork...'
@@ -190,12 +189,6 @@ wget -O "$HOME/.config/ollauncha/remotes" https://github.com/MyMel2001/ollauncha
 echo '[MAGIC] Get what will make me stay alive...'
 wget -O "$HOME/.local/bin/cafe" https://github.com/MyMel2001/cafe/raw/refs/heads/main/cafe.sh
 chmod +x "$HOME/.local/bin/cafe"
-
-# Install Safari extensions
-mas install 1352778147  # Bitwarden                       (2026.3.1)
-mas install 6745342698  # uBlock Origin Lite              (2026.422.1301)
-mas install 1606897889  # Consent-O-Matic             (1.1.3)
-mas install 1561604170  # Nightshift Dark Mode            (1.2)
 
 echo '[MAGIC] Rebooting...'
 sudo reboot
