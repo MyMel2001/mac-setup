@@ -62,7 +62,6 @@ brew install --cask \
 
 # Browsers
 brew install --cask \
-  orion \
   google-chrome # needed for antigravity browser-based app testing agent.
 
 # Install "nvm"
