@@ -91,7 +91,7 @@ mas install 408981434 500154009 6736948278 931571202
 
 # now we install our vscodium plugins
 echo '[MAGIC] Plugging in code-esque plugins...'
-antigravity --install-extension kilocode.kilo-code
+antigravity --install-extension saoudrizwan.claude-dev
 antigravity --install-extension ms-python.python
 antigravity --install-extension devsense.phptools-vscode
 antigravity --install-extension golang.Go
