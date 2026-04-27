@@ -173,7 +173,7 @@ chmod +x "$HOME/.local/bin/cafe"
 
 # Set claude code to use our endpoint when using the "clood-kode" cmd
 echo '[MAGIC] Make ze clood...'
-echo 'ANTHROPIC_AUTH_TOKEN="nm-bPBOmgqCE8o82tPF6j4rgw2j" ANTHROPIC_BASE_URL="http://100.118.11.83:8088" claude $@' > "$HOME/.local/bin/clood-kode"
+echo 'ANTHROPIC_AUTH_TOKEN="nm-bPBOmgqCE8o82tPF6j4rgw2j" ANTHROPIC_BASE_URL="http://100.118.11.83:8088" CLAUDE_CODE_TIMEOUT_MS=6000000 claude $@' > "$HOME/.local/bin/clood-kode"
 chmod +x "$HOME/.local/bin/clood-kode"
 
 # Install Safari extensions
