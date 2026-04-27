@@ -88,7 +88,7 @@ npm i -g surge
 echo '[MAGIC] Now installing Mac App Store apps...'
 mas install 408981434 500154009 6736948278 931571202
 
-# now we install our vscodium plugins
+# now we install our coding plugins
 echo '[MAGIC] Plugging in code-esque plugins...'
 antigravity --install-extension saoudrizwan.claude-dev
 antigravity --install-extension ms-python.python
