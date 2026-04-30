@@ -170,6 +170,9 @@ echo '[MAGIC] Get what will make me stay alive...'
 wget -O "$HOME/.local/bin/cafe" https://github.com/MyMel2001/cafe/raw/refs/heads/main/cafe.sh
 chmod +x "$HOME/.local/bin/cafe"
 
+mkdir -p "$HOME/Library/Application Support/Antigravity/User"
+wget -O "$HOME/Library/Application Support/Antigravity/User/settings.json" https://github.com/MyMel2001/mac-setup/raw/refs/heads/main/claude-settings.json
+
 # Set claude code to use our endpoint when using the "clood-kode" cmd
 echo '[MAGIC] Make ze clood...'
 echo 'ANTHROPIC_AUTH_TOKEN="nm-bPBOmgqCE8o82tPF6j4rgw2j" ANTHROPIC_BASE_URL="http://100.118.11.83:8088" CLAUDE_CODE_TIMEOUT_MS=6000000 claude $@' > "$HOME/.local/bin/clood-kode"
