@@ -1,4 +1,15 @@
-"claudeCode.environmentVariables": [
-  { "name": "ANTHROPIC_BASE_URL", "value": "http://100.118.11.83:8088" },
-  { "name": "ANTHROPIC_AUTH_TOKEN", "value": "nm-bPBOmgqCE8o82tPF6j4rgw2j" }
-]
+{
+  "workbench.preferredHighContrastColorTheme": "Default Dark Modern",
+  "git.autofetch": true,
+  "extensions.autoCheckUpdates": false,
+  "update.mode": "none",
+  "terminal.integrated.commandsToSkipShell": [
+    "kilo-code.new.agentManagerOpen",
+    "kilo-code.new.agentManager.showTerminal",
+    "kilo-code.new.agentManager.runScript",
+  ],
+  "claudeCode.environmentVariables": [
+    { "name": "ANTHROPIC_BASE_URL", "value": "http://100.118.11.83:8088" },
+    { "name": "ANTHROPIC_AUTH_TOKEN", "value": "nm-bPBOmgqCE8o82tPF6j4rgw2j" }
+  ]
+}
