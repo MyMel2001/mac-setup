@@ -201,5 +201,10 @@ wget -O ~/nextdns.mobileconfig https://tinyurl.com/yc26w9rc
 echo '[MAGIC] Enabling dark mode...'
 defaults write .GlobalPreferences.plist AppleInterfaceStyle -string 'Dark'
 
+# born to git, forced to wipe...
+echo '[MAGIC] Configure git'
+git config --global user.name "Mel"
+git config --global user.email "nope@example.com"
+
 echo '[MAGIC] Rebooting...'
 sudo reboot
