@@ -44,7 +44,9 @@ brew install --cask \
 # Gaming & emulation
 brew install --cask \
   retroarch \
-  mythic  # arm exclusive
+  mythic \
+  roblox \
+  minecraft
 
 # Productivity & utilities
 brew install --cask \
