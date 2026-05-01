@@ -36,14 +36,14 @@ brew install --cask \
 # Creative & media
 brew install --cask \
   krita \
-  darktable \
+  rawtherapee \
   diffusionbee \
   upscayl \
   vlc
 
 # Gaming & emulation
 brew install --cask \
-  openemu \
+  retroarch \
   mythic  # arm exclusive
 
 # Productivity & utilities
