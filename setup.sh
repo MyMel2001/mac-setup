@@ -57,8 +57,7 @@ brew install --cask \
 # Privacy & security
 brew install --cask \
   protonvpn \
-  tuta-mail \
-  session
+  tuta-mail
 
 # Browsers
 brew install --cask \
