@@ -130,6 +130,13 @@ sudo cp -r /Volumes/CrystalFetch/CrystalFetch.app /Applications
 hdiutil detach /Volumes/CrystalFetch
 rm -f "$HOME/CrystalFetch.dmg"
 
+# get mythic
+echo '[MAGIC] Downloading windows game compatibility layer...'
+wget https://dl.getmythic.app/updates/92033dfd-7a35-4629-9ca5-60d66576fb65/Mythic.zip
+unzip Mythic.zip
+sudo cp -R Mythic.app /Applications
+rm Mythic.zip Mythic.app
+
 # we set our neat settings
 echo '[MAGIC] Modifying settings...'
 defaults write -g InitialKeyRepeat -int 12
