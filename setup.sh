@@ -81,6 +81,12 @@ nvm i 13 && nvm i --lts && nvm i 24
 nvm alias default 24  # persist the default node version across new shells
 nvm use 24
 
+# Get Codex
+echo '[MAGIC] Dialing the codex..'
+npm i -g @openai/codex
+mkdir "$HOME/.codex"
+wget -O "$HOME/.codex/config.toml" "https://github.com/MyMel2001/codex-cfg/raw/refs/heads/main/config.toml"
+
 # Get surge...
 echo '[MAGIC] Installing Surge..'
 npm i -g surge
