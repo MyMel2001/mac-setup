@@ -29,7 +29,7 @@ echo '[MAGIC] Installing Homebrew casks...'
 
 # Development tools
 brew install --cask \
-  antigravity \
+  antigravity-ide \
   android-platform-tools 
   
 # Creative & media
@@ -84,14 +84,14 @@ mas install 408981434 500154009 6736948278 931571202
 
 # now we install our coding plugins
 echo '[MAGIC] Plugging in code-esque plugins...'
-antigravity --install-extension RooVeterinaryInc.roo-cline
-antigravity --install-extension ms-python.python
-antigravity --install-extension devsense.phptools-vscode
-antigravity --install-extension golang.Go
-antigravity --install-extension esbenp.prettier-vscode
-antigravity --install-extension redhat.vscode-yaml
-antigravity --install-extension bradlc.vscode-tailwindcss
-antigravity --install-extension ms-azuretools.vscode-docker
+antigravity-ide --install-extension RooVeterinaryInc.roo-cline
+antigravity-ide --install-extension ms-python.python
+antigravity-ide --install-extension devsense.phptools-vscode
+antigravity-ide --install-extension golang.Go
+antigravity-ide --install-extension esbenp.prettier-vscode
+antigravity-ide --install-extension redhat.vscode-yaml
+antigravity-ide --install-extension bradlc.vscode-tailwindcss
+antigravity-ide --install-extension ms-azuretools.vscode-docker
 
 # time to install the rosetta stone!
 echo '[MAGIC] Gathering Rosetta Stones...'
