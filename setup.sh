@@ -24,36 +24,31 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
 # install the basics
 echo '[MAGIC] Installing Homebrew packages...'
-brew install python@3.12 python-tk@3.12 wget yt-dlp mas go fzf ollama codex gnucobol claude-code
+brew install python@3.12 python-tk@3.12 wget yt-dlp mas go fzf ollama claude-code git-credential-manager
 echo '[MAGIC] Installing Homebrew casks...'
 
 # Development tools
 brew install --cask \
-  antigravity \
-  android-platform-tools \
-  utm
-
+  antigravity-ide \
+  android-platform-tools 
+  
 # Creative & media
 brew install --cask \
   krita \
   rawtherapee \
-  diffusionbee \
   upscayl \
   vlc
 
 # Gaming & emulation
 brew install --cask \
-  retroarch \
-  mythic \
   roblox \
-  minecraft
+  minecraft \
+  mythic
 
 # Productivity & utilities
 brew install --cask \
   onlyoffice \
-  raycast \
   the-unarchiver \
-  balenaetcher \
   tailscale-app
 
 # Privacy & security
@@ -63,7 +58,8 @@ brew install --cask \
 
 # Browsers
 brew install --cask \
-  google-chrome # needed for antigravity browser-based app testing agent.
+  google-chrome \
+  helium-browser
 
 # Install "nvm"
 echo '[MAGIC] Installing "nvm"...'
@@ -89,53 +85,9 @@ npm i -g surge
 echo '[MAGIC] Now installing Mac App Store apps...'
 mas install 408981434 500154009 6736948278 931571202
 
-# now we install our coding plugins
-echo '[MAGIC] Plugging in code-esque plugins...'
-antigravity --install-extension Anthropic.claude-code
-antigravity --install-extension ms-python.python
-antigravity --install-extension devsense.phptools-vscode
-antigravity --install-extension golang.Go
-antigravity --install-extension esbenp.prettier-vscode
-antigravity --install-extension redhat.vscode-yaml
-antigravity --install-extension bradlc.vscode-tailwindcss
-antigravity --install-extension ms-azuretools.vscode-docker
-
-# now we copy our 86box roms (86box replaced with UTM, so this is commented.)
-# echo '[MAGIC] Install 86box ROMs'
-# git clone https://github.com/86Box/roms ~/.86roms-magic
-# mkdir -p '~/Library/Application Support/net.86box.86Box/roms'
-# cp -r ~/.86roms-magic/* '~/Library/Application Support/net.86box.86Box/roms'
-# rm -rf ~/.86roms-magic
-
 # time to install the rosetta stone!
 echo '[MAGIC] Gathering Rosetta Stones...'
 softwareupdate --install-rosetta --agree-to-license
-
-# find and open the dmg.
-echo '[MAGIC] Installing Open Cowork...'
-
-wget -P "$HOME" https://github.com/OpenCoworkAI/open-cowork/releases/download/v3.3.0/Open.Cowork-3.3.0-mac-arm64.dmg
-hdiutil attach "$HOME/Open.Cowork"*.dmg
-
-sudo cp -r /Volumes/Open\ Cowork*/Open\ Cowork.app /Applications
-
-hdiutil detach /Volumes/Open\ Cowork*
-rm -f "$HOME/Open.Cowork-"*.dmg
-
-# get Windows downloader
-echo '[MAGIC] Downloading Windows downloader...'
-wget -P "$HOME" https://github.com/TuringSoftware/CrystalFetch/releases/download/v2.2.0/CrystalFetch.dmg
-hdiutil attach "$HOME/CrystalFetch.dmg"
-sudo cp -r /Volumes/CrystalFetch/CrystalFetch.app /Applications
-hdiutil detach /Volumes/CrystalFetch
-rm -f "$HOME/CrystalFetch.dmg"
-
-# get mythic
-echo '[MAGIC] Downloading windows game compatibility layer...'
-wget https://dl.getmythic.app/updates/92033dfd-7a35-4629-9ca5-60d66576fb65/Mythic.zip
-unzip Mythic.zip
-sudo cp -R Mythic.app /Applications
-rm Mythic.zip Mythic.app
 
 # we set our neat settings
 echo '[MAGIC] Modifying settings...'
@@ -178,33 +130,15 @@ echo '[MAGIC] Get what will make me stay alive...'
 wget -O "$HOME/.local/bin/cafe" https://github.com/MyMel2001/cafe/raw/refs/heads/main/cafe.sh
 chmod +x "$HOME/.local/bin/cafe"
 
-mkdir -p "$HOME/Library/Application Support/Antigravity/User"
-wget -O "$HOME/Library/Application Support/Antigravity/User/settings.json" https://github.com/MyMel2001/mac-setup/raw/refs/heads/main/claude-settings.json
-
-# Set claude code to use our endpoint when using the "clood-kode" cmd
-echo '[MAGIC] Make ze clood...'
-echo 'ANTHROPIC_AUTH_TOKEN="nm-bPBOmgqCE8o82tPF6j4rgw2j" ANTHROPIC_BASE_URL="http://100.118.11.83:8088" CLAUDE_CODE_TIMEOUT_MS=6000000 claude $@' > "$HOME/.local/bin/clood-kode"
-chmod +x "$HOME/.local/bin/clood-kode"
-
-# Install Safari extensions
-echo '[MAGIC] Going on a Safari to get extensions...'
-mas install 1352778147  # Bitwarden
-mas install 6745342698  # uBlock Origin Lite
-mas install 1606897889  # Consent-O-Matic
-mas install 1561604170  # Nightshift Dark Mode
-
 # Download NextDNS profile
 echo '[MAGIC] Downloading NextDNS profile...'
 wget -O ~/nextdns.mobileconfig https://tinyurl.com/yc26w9rc
-
-# Make it dark
-echo '[MAGIC] Enabling dark mode...'
-defaults write .GlobalPreferences.plist AppleInterfaceStyle -string 'Dark'
 
 # born to git, forced to wipe...
 echo '[MAGIC] Configure git'
 git config --global user.name "Mel"
 git config --global user.email "nope@example.com"
+git config --global credential.credentialStore keychain
 
-echo '[MAGIC] Rebooting...'
-sudo reboot
+# echo '[MAGIC] Rebooting...'
+# sudo reboot
